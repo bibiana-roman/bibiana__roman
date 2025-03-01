@@ -18,11 +18,51 @@ class Ingestiones():
         with open(file = ruta_json, mode = "r", encoding = "utf-8") as f:
             datos = f.read()
         return datos
+    
+    def leer_varios_txt(self, nombre = ""):
+        #r: read, w: write
+        ruta_txt     = "{}\\txt\{}".format(self.ruta_static, nombre) 
+        datos = ""
+        with open(file = ruta_txt, mode = "r", encoding = "utf-8") as f:
+            datos = f.read()
+        return datos
+    
+    def leer_cualquier_excel(self, nombre = ""):
+        pass
+
+    def leer_cualquier_csv(self, nombre = ""):
+        pass
+
+    def leer_html(self, url = ""):
+        pass
+
+    def leer_bd(self, nombre_bd = "", servidor = "", puerto = 0000):
+        pass
+
+    def leer_api(self, url = ""):
+        pass
+
+    def escribir_txt(self, nombre, datos):
+        #r: read, w: write
+        ruta_txt = "{}.txt".format(nombre) 
+        datos = ""
+        with open(file = ruta_txt, mode = "w", encoding = "utf-8") as f:
+            datos = f.write(datos)
+        return datos
 
 inges = Ingestiones()
 datos_json = inges.leer_json()
-datos_txt = inges.leer_txt()
 print(datos_json)
+print("********************************************************************")
+print("********************************************************************")
+datos_txt = inges.leer_txt()
 print(datos_txt)
+print("********************************************************************")
+print("********************************************************************")
+nombre_archivo = "info copy.txt"
+datos_txt_dos = inges.leer_varios_txt(nombre_archivo)
+print(datos_txt_dos)
 
-
+inges.escribir_txt(nombre = "archivo_json", datos = datos_json)
+inges.escribir_txt(nombre = "archivo_txt", datos = datos_txt)
+inges.escribir_txt(nombre = "archivo_txt_copy", datos = datos_txt_dos)
