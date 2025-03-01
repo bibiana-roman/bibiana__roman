@@ -1,0 +1,11 @@
+
+
+1. Tipos de archivos TXT
+Hay varios tipos de archivos de TEXTO, y le proporcionamos los nombres de los más famosos:
+
+.TXT (Archivo que almacena texto sin formato)
+.RTF (archivo de formato de texto enriquecido)
+.DOC y .DOCX (archivos de texto de Microsoft Word)
+.PDF (archivo PDF que no se puede editar directamente)
+.WPD (archivo de documento de WordPerfect)
+.ODT (archivo de documento de OpenOffice Writer)
