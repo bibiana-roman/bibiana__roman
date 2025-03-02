@@ -6,7 +6,7 @@
 import json
 import requests
 
-class Ingestiones():
+class Actividad_1():
     def __init__(self):
         self.ruta_static = r"C:src\poo_2025\static"
 
@@ -29,7 +29,7 @@ class Ingestiones():
             datos = json.dump(datos, f)
         return datos
 
-ingestion = Ingestiones()
+ingestion = Actividad_1()
 #datos_json = ingestion.leer_api("https://api.github.com/users/octocat")
 datos_json = ingestion.leer_api("https://openlibrary.org/api/books?bibkeys=ISBN:0451526538&format=json&jscmd=data")
 print("Datos json: ", datos_json)            
