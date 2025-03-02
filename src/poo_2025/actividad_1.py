@@ -5,10 +5,12 @@
 
 import json
 import requests
+import sys
 
 class Actividad_1():
     def __init__(self):
         self.ruta_static = r"C:src\poo_2025\static"
+        sys.stdout.reconfigure(encoding = 'utf-8')
 
     def leer_api(self, url):
         # Realiza una solicitud GET a la API
