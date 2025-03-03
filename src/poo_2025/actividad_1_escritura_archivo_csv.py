@@ -4,7 +4,7 @@ import os  # Para manejar rutas correctamente
 
 class Actividad_1_escritura_archivo_csv():
     def __init__(self):
-        self.ruta_static = r"C:\src\poo_2025\static"
+        self.ruta_static = r"src\poo_2025\static"
         sys.stdout.reconfigure(encoding='utf-8')
 
     def escribir_csv(self, nombre_archivo="frutas.csv", datos=None):
@@ -20,8 +20,8 @@ class Actividad_1_escritura_archivo_csv():
         with open(ruta_csv, mode="w", encoding="utf-8", newline="") as f:
             escritor = csv.writer(f)
             escritor.writerow(["Fruta", "Color", "Sabor"])  # Encabezados opcionales
-            escritor.writerows(datos)  
-
+            escritor.writerows(datos)
+    
         print(f"Archivo '{ruta_csv}' guardado correctamente.")
 
 # Datos
