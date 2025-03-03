@@ -2,12 +2,30 @@
 import json
 import requests
 import sys
+import numpy as np
+import matplotlib.pyplot as plt
 
 class Actividad_1():
     def __init__(self):
         self.ruta_static = r"C:\src\poo_2025\static"
         sys.stdout.reconfigure(encoding = 'utf-8')
 
+#Script para graficar rectas ax ** n
+    def graficar_rectas(self, a, n):
+        x = np.linspace(-10, 10, 400)  #Generación de valores de x en el rango de -10 a 10
+        y = (a * x) ** n  # Definición de la función
+
+        # Graficar 
+        plt.figure(figsize=(8, 6))
+        plt.plot(x, y, label=f'$f(x) = ({a}x)^{n}$', color="b")
+        plt.axhline(0, color='black', linewidth=1)
+        plt.axvline(0, color='black', linewidth=1)
+        plt.grid(True, linestyle="--", alpha=0.6)
+        plt.legend()
+        plt.title("Gráfica de la función f(x) = (a * x)^n")
+        plt.xlabel("X")
+        plt.ylabel("f(X)")
+        plt.show()
 
     def escribir_txt(self, nombre_archivo = "", datos = None):
         if nombre_archivo == "":
@@ -52,4 +70,4 @@ print("Datos json: ", datos_json)
 if ingestion.escribir_txt(nombre_archivo = "Entrega_actividad_1.txt", datos = datos_json):
     print("Se creo el archivo txt")
 #print("Esta es la ruta estatica: ", ingestion.ruta_static)
-ingestion.graficar_rectas(5, 5.4, 2)          
+ingestion.graficar_rectas(5, 2)          
