@@ -13,5 +13,6 @@ setup(
         "pandas",
         "requests",
         "matplotlib"
+        "openpyxl"
     ]
 )
