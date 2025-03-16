@@ -22,7 +22,7 @@ jobs:
       - name: paso1 - crea entorno virtual
         run: python -m venv venv
       - name: paso2 - activar entorno virtual
-        run: call venv\Scripts\activate   
+        run: ./venv/Scripts/activate   
       - name: paso3 - actualizar pip
         run: pip install --upgrade pip
       - name: paso4 - instalar dependencias
