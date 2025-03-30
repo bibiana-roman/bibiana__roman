@@ -1,4 +1,4 @@
-name: actividad_2
+name: actividades
 
 on:
   push:
@@ -36,13 +36,13 @@ jobs:
         run: pip install -e .
       - name: paso5 - Pre-build Matplotlib Cache
         run: python -c "import matplotlib.pyplot as plt; plt.figure(); plt.close()"
-      - name: paso6 - Ejecutar script de la actividad 2
-        run: python src/poo_2025/actividad_2.py
+      - name: paso6 - Ejecutar script de la actividad 3
+        run: python src/poo_2025/actividad_3.py
 
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: Entrega actividad 2
+          commit_message: Entrega actividades
           commit_user_name: Bibiana Roman [GitHub Actions]
           commit_user_email: bibiana.roman@est.iudigital.edu.co
           commit_author: Bibiana Roman <bibiana.roman@est.iudigital.edu.co>
