@@ -8,7 +8,7 @@ setup(
     author = "Bibiana Roman",
     author_email = "bibiana.roman@est.iudigital.edu.co",
     description = "",
-    py_modules = ["actividad_1"],
+    py_modules = ["actividades"],
     install_requires = [
         "kagglehub[pandas-datasets]>=0.3.8",
         "matplotlib>=3.5.0",
