@@ -39,6 +39,13 @@ jobs:
       - name: paso6 - Ejecutar script de la actividad 3
         run: python src/poo_2025/actividad_3.py
 
+      - name: Verificar cambios en archivos antes del commit
+        run: git status
+      - name: Configurar usuario de Git
+        run: |
+          git config --global user.name "Bibiana Roman"
+          git config --global user.email "bibiana.roman@est.iudigital.edu.co"
+
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
